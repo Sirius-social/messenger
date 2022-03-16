@@ -1,3 +1,35 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.header {
+    @apply py-4;
+}
+
+.header-wrapper {
+    @apply flex justify-between items-center;
+}
+
+.logo-link {
+    @apply flex items-center font-bold text-3xl;
+}
+
+.logo-img {
+    @apply w-16 h-16 mr-2;
+}
+
+.nav-list {
+    @apply flex;
+}
+
+.nav-item {
+    @apply py-1.5 px-3;
+}
+
+.nav-link {
+    @apply text-gray-800 transition-all duration-100 hover:text-green-700;
+}
+
+.primary-button {
+    @apply px-4 py-2 text-white bg-green-600 rounded-md transition-all duration-100 hover:text-white hover:bg-green-800;
+}

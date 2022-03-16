@@ -2,8 +2,11 @@
 <div class="hidden lg:flex lg:flex-shrink-0">
     <div class="flex flex-col w-64 border-r border-gray-200 pt-5 pb-4 bg-gray-100">
         <div class="flex items-center flex-shrink-0 px-6">
-            <h1 class="text-gray-800 text-2xl font-medium">
-                <a href="{{ route('dashboard') }}">{{ config('app.name', 'Laravel') }}</a>
+            <h1 class="text-gray-800 text-lg font-medium">
+                <a href="{{ route('dashboard') }}" class="flex items-center">
+                    <img class="mr-3 w-10 h-10" src="{{ asset('images/logo/1@3x.png') }}" alt="Networks Synergy">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
             </h1>
         </div>
         <!-- Sidebar component, swap this element with another sidebar if you like -->
