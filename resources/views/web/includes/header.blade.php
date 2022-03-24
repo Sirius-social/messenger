@@ -1,4 +1,4 @@
-<header class="header bg-white">
+<header class="header">
     <div class="container mx-auto">
         <div class="header-wrapper">
             <div class="header-logo">
@@ -11,32 +11,22 @@
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            Home
+                            Features
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            About us
+                            Download
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            Services
+                            Security
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            Solutions
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            Testimonial
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link primary-button">
-                            Contact
+                            Help center
                         </a>
                     </li>
                 </ul>

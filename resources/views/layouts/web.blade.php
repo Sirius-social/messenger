@@ -23,5 +23,7 @@
     <main>
         @yield('content')
     </main>
+
+    @include('web.includes.footer')
 </body>
 </html>

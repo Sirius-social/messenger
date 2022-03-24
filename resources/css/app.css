@@ -3,14 +3,14 @@
 @import 'tailwindcss/utilities';
 
 .header {
-    @apply py-4;
+    @apply py-4 bg-white fixed w-full;
 }
 
 .header-wrapper {
-    @apply flex justify-between items-center;
+    @apply flex justify-between items-center px-4 xl:px-0;
 }
 
-.logo-link {
+.header-logo .logo-link {
     @apply flex items-center font-bold text-3xl;
 }
 
@@ -18,18 +18,103 @@
     @apply w-16 h-16 mr-2;
 }
 
-.nav-list {
+.header-navigation .nav-list {
     @apply flex;
 }
 
-.nav-item {
+.header-navigation .nav-item {
     @apply py-1.5 px-3;
 }
 
-.nav-link {
+.header-navigation .nav-link {
     @apply text-gray-800 transition-all duration-100 hover:text-green-700;
 }
 
 .primary-button {
     @apply px-4 py-2 text-white bg-green-600 rounded-md transition-all duration-100 hover:text-white hover:bg-green-800;
+}
+
+main {
+    @apply pt-20;
+}
+
+.hero {
+    @apply flex-none items-center px-4 py-24 xl:flex xl:px-0;
+}
+
+.hero-content {
+    @apply flex flex-col xl:w-3/5 justify-center pr-10;
+}
+
+.hero-img {
+    @apply xl:w-2/5 max-h-96 justify-center items-center hidden xl:flex;
+}
+
+.hero-img img {
+    @apply w-full object-cover rounded-full;
+}
+
+.hero-title {
+    @apply font-bold text-7xl text-green-500 mb-6 leading-tight;
+}
+
+.hero-subtitle {
+    @apply text-3xl text-gray-800 mb-4;
+}
+
+.hero-description {
+    @apply font-semibold text-xl text-gray-600;
+}
+
+.video-lead {
+    @apply text-base font-medium uppercase text-green-700 tracking-widest leading-9;
+}
+
+.video-title {
+    @apply text-4xl font-bold pb-6;
+}
+
+.video-description {
+    @apply text-lg xl:px-40;
+}
+
+.video-content {
+    @apply mt-14 rounded-xl overflow-hidden;
+}
+
+.footer {
+    @apply bg-slate-900 py-20 xl:px-0 px-4;
+}
+
+.footer-logo {
+    @apply flex items-center text-slate-100 font-bold text-3xl mb-4;
+}
+
+.footer-description {
+    @apply text-slate-500 text-lg mb-20 pr-12;
+}
+
+.footer-apps {
+    @apply flex-none inline-grid px-4 gap-x-6;
+    grid-template-columns: repeat(3, minmax(6rem, 1fr));
+}
+
+.footer-apps .apps-link {
+    @apply flex flex-col items-center justify-center text-sm font-semibold mb-6 text-slate-300 text-slate-600 hover:text-slate-500;
+}
+
+.footer-apps .apps-link svg {
+    @apply w-12 h-12 mb-6;
+}
+
+.footer-title {
+    @apply font-semibold text-slate-100;
+}
+
+.footer-navigation .nav-list {
+    @apply mt-3 space-y-2;
+}
+
+.footer-navigation .nav-link {
+    @apply hover:text-slate-300 text-slate-400 text-sm leading-6;
 }
