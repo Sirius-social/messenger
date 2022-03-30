@@ -21,14 +21,14 @@
         </div>
     </div>
     <div class="bg-green-700">
-        <div class="container mx-auto text-center xl:p-24 py-24 px-4 xl:px-0">
-            <h2 class="text-5xl text-gray-100">
+        <div class="container mx-auto text-center lg:p-24 px-4 py-8 xl:px-0">
+            <h2 class="text-xl lg:text-5xl text-gray-100 md:text-3xl">
                 Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Curabitur aliquet quam id
                 dui posuere blandit. Pellentesque in ipsum id orci porta dapibus.
             </h2>
         </div>
     </div>
-    <section class="container mx-auto py-24 text-center xl:px-0 px-4">
+    <section class="container mx-auto py-8 sm:py-24 text-center xl:px-0 px-4">
         <h3 class="video-lead">Curabitur arcu erat</h3>
         <h2 class="video-title">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</h2>
         <p class="video-description">

@@ -11,7 +11,7 @@
 }
 
 .header-logo .logo-link {
-    @apply flex items-center font-bold text-3xl;
+    @apply flex items-center font-bold sm:text-3xl text-xl;
 }
 
 .logo-img {
@@ -19,7 +19,7 @@
 }
 
 .header-navigation .nav-list {
-    @apply flex;
+    @apply hidden sm:flex;
 }
 
 .header-navigation .nav-item {
@@ -30,16 +30,20 @@
     @apply text-gray-800 transition-all duration-100 hover:text-green-700;
 }
 
+.mobile-nav-button {
+    @apply sm:hidden text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600;
+}
+
 .primary-button {
     @apply px-4 py-2 text-white bg-green-600 rounded-md transition-all duration-100 hover:text-white hover:bg-green-800;
 }
 
 main {
-    @apply pt-20;
+    @apply pt-24;
 }
 
 .hero {
-    @apply flex-none items-center px-4 py-24 xl:flex xl:px-0;
+    @apply flex-none items-center px-4 sm:py-24 py-8 xl:flex xl:px-0;
 }
 
 .hero-content {
@@ -55,15 +59,15 @@ main {
 }
 
 .hero-title {
-    @apply font-bold text-7xl text-green-500 mb-6 leading-tight;
+    @apply text-3xl font-bold lg:text-7xl text-green-500 mb-6 leading-tight md:text-5xl;
 }
 
 .hero-subtitle {
-    @apply text-3xl text-gray-800 mb-4;
+    @apply text-lg lg:text-3xl text-gray-800 mb-4 md:text-xl;
 }
 
 .hero-description {
-    @apply font-semibold text-xl text-gray-600;
+    @apply font-semibold text-base text-gray-600 md:text-lg lg:text-xl;
 }
 
 .video-lead {
@@ -71,23 +75,23 @@ main {
 }
 
 .video-title {
-    @apply text-4xl font-bold pb-6;
+    @apply text-2xl lg:text-4xl font-bold lg:pb-6 pb-4 md:text-2xl;
 }
 
 .video-description {
-    @apply text-lg xl:px-40;
+    @apply lg:text-lg xl:px-40 md:text-base text-base;
 }
 
 .video-content {
-    @apply mt-14 rounded-xl overflow-hidden;
+    @apply sm:mt-14 mt-8 rounded-xl overflow-hidden;
 }
 
 .footer {
-    @apply bg-slate-900 py-20 xl:px-0 px-4;
+    @apply bg-slate-900 py-20 lg:px-0 px-4;
 }
 
 .footer-logo {
-    @apply flex items-center text-slate-100 font-bold text-3xl mb-4;
+    @apply flex items-center text-slate-100 font-bold text-xl sm:text-3xl mb-4;
 }
 
 .footer-description {

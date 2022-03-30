@@ -4022,6 +4022,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
+__webpack_require__(/*! ./mobile-nav */ "./resources/js/mobile-nav.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -4052,6 +4054,33 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/mobile-nav.js":
+/*!************************************!*\
+  !*** ./resources/js/mobile-nav.js ***!
+  \************************************/
+/***/ (() => {
+
+var nav_buttons = document.getElementsByClassName('mobile-nav-button');
+
+for (var i = 0; i < nav_buttons.length; i++) {
+  nav_buttons[i].addEventListener('click', function () {
+    var menu = document.getElementById('mobile-menu');
+    var overlay = document.getElementById('mobile-menu-overlay');
+
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    } else {
+      menu.classList.add('hidden');
+      overlay.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+}
 
 /***/ }),
 

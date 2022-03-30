@@ -1,6 +1,6 @@
 <footer class="footer">
-    <div class="container mx-auto flex">
-        <div class="flex-none w-1/2">
+    <div class="container mx-auto sm:flex sm:space-y-0 space-y-6">
+        <div class="flex-none sm:w-1/2">
             <div class="footer-column">
                 <div class="footer-logo">
                     <img class="logo-img" src="{{ asset('images/logo/1@3x.png') }}" alt="Networks Synergy">
@@ -41,8 +41,8 @@
                 </div>
             </div>
         </div>
-        <div class="flex w-1/2">
-            <div class="lg:flex-none lg:w-1/2">
+        <div class="flex sm:w-1/2">
+            <div class="w-1/2">
                 <h5 class="footer-title">Product</h5>
                 <nav class="footer-navigation nav">
                     <ul class="nav-list">
@@ -64,7 +64,7 @@
                     </ul>
                 </nav>
             </div>
-            <div class="lg:flex-none lg:w-1/2">
+            <div class="w-1/2">
                 <h5 class="footer-title">Support</h5>
                 <nav class="footer-navigation nav">
                     <ul class="nav-list">
