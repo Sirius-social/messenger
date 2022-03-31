@@ -47,12 +47,12 @@
                 <nav class="footer-navigation nav">
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('web.features') }}" class="nav-link">
                                 Features
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('web.downloads') }}" class="nav-link">
                                 Download
                             </a>
                         </li>

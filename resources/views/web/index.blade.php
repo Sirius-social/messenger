@@ -1,22 +1,24 @@
 @extends('layouts.web')
 
 @section('content')
-    <div class="container mx-auto">
-        <div class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Nulla porttitor accumsan tincidunt.</h1>
-                <h2 class="hero-subtitle">
-                    Quisque velit nisi, pretium ut lacinia in, elementum id enim. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                </h2>
-                <p class="hero-description">
-                    Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium
-                    ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan
-                    tincidunt.
-                </p>
-            </div>
-            <div class="hero-img">
-                <img src="{{ asset('images/hero-img.jpg') }}" alt="Digital Media agency">
+    <div class="bg-white pt-24">
+        <div class="container mx-auto">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Nulla porttitor accumsan tincidunt.</h1>
+                    <h2 class="hero-subtitle">
+                        Quisque velit nisi, pretium ut lacinia in, elementum id enim. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                    </h2>
+                    <p class="hero-description">
+                        Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Quisque velit nisi, pretium
+                        ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan
+                        tincidunt.
+                    </p>
+                </div>
+                <div class="hero-img">
+                    <img src="{{ asset('images/hero-img.jpg') }}" alt="Digital Media agency">
+                </div>
             </div>
         </div>
     </div>

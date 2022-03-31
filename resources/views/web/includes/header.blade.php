@@ -20,12 +20,12 @@
                 </button>
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('web.features') }}" class="nav-link {{ Route::currentRouteName() == 'web.features' ? 'active' : '' }}">
                             Features
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('web.downloads') }}" class="nav-link">
                             Download
                         </a>
                     </li>
@@ -57,9 +57,9 @@
                     </button>
                     <div class="space-y-6">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="#" class="block hover:text-green-500" aria-current="page">Features</a>
+                        <a href="{{ route('web.features') }}" class="block hover:text-green-500 {{ Route::currentRouteName() == 'web.features' ? 'text-green-500' : '' }}" aria-current="page">Features</a>
 
-                        <a href="#" class="block hover:text-green-500">Download</a>
+                        <a href="{{ route('web.downloads') }}" class="block hover:text-green-500">Download</a>
 
                         <a href="#" class="block hover:text-green-500">Security</a>
 

@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 .header {
-    @apply py-4 bg-white fixed w-full;
+    @apply py-4 absolute w-full;
 }
 
 .header-wrapper {
@@ -27,7 +27,11 @@
 }
 
 .header-navigation .nav-link {
-    @apply text-gray-800 transition-all duration-100 hover:text-green-700;
+    @apply font-semibold text-gray-800 transition-all duration-100 hover:text-green-500;
+}
+
+.header-navigation .nav-link.active {
+    @apply text-green-500;
 }
 
 .mobile-nav-button {
@@ -36,10 +40,6 @@
 
 .primary-button {
     @apply px-4 py-2 text-white bg-green-600 rounded-md transition-all duration-100 hover:text-white hover:bg-green-800;
-}
-
-main {
-    @apply pt-24;
 }
 
 .hero {
