@@ -58,6 +58,8 @@ COPY ./docker/8.1/php.ini /etc/php/8.1/cli/conf.d/99-sail.ini
 
 RUN chmod +x /usr/local/bin/start-container
 RUN composer install -d /var/www/html/
-RUN chmod -R 777 /var/www/html/
+RUN chown -R sail:sail /var/www/
+RUN chmod -R 755 /var/www/html/storage/
+RUN chmod -R 755 /var/www/html/bootstrap/
 
 ENTRYPOINT ["start-container"]
