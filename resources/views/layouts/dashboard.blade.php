@@ -12,7 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
+        @livewireStyles
         <!-- Scripts -->
     </head>
     <body x-data="{sidebarOpen: false, user_dropdown: false}" class="font-sans antialiased h-screen flex overflow-hidden bg-white">
@@ -27,5 +27,6 @@
             </main>
         </div>
         <script src="{{ asset('js/app.js') }}" defer></script>
+        @livewireScripts
     </body>
 </html>

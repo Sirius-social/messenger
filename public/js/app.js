@@ -4024,6 +4024,8 @@ __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
 __webpack_require__(/*! ./mobile-nav */ "./resources/js/mobile-nav.js");
 
+__webpack_require__(/*! ./language-switcher */ "./resources/js/language-switcher.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -4054,6 +4056,31 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/language-switcher.js":
+/*!*******************************************!*\
+  !*** ./resources/js/language-switcher.js ***!
+  \*******************************************/
+/***/ (() => {
+
+var buttons = document.getElementsByClassName('dashboard-language-switcher');
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function () {
+    var wrapper = this.closest('.dashboard-language-wrapper');
+    var inputs = wrapper.querySelectorAll("input, select, textarea");
+    var language = this.dataset.language;
+
+    for (var j = 0; j < inputs.length; j++) {
+      var input = inputs[j];
+      var name = input.getAttribute('name');
+      var new_name = name.split('_')[0] + '_' + language;
+      input.setAttribute('name', new_name);
+    }
+  });
+}
 
 /***/ }),
 

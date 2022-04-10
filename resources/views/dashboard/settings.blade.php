@@ -54,31 +54,7 @@
                     </div>
                 </div>
 
-                <div class="mt-6 flex-grow lg:mt-0 lg:ml-6 lg:flex-grow-0 lg:flex-shrink-0">
-                    <div class="mt-1 lg:hidden">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 inline-block rounded-full overflow-hidden h-12 w-12" aria-hidden="true">
-                                <img class="rounded-full h-full w-full" src="{{ auth()->user()->avatar }}" alt="">
-                            </div>
-                            <div class="ml-5 rounded-md shadow-sm">
-                                <div class="group relative border border-gray-300 rounded-md py-2 px-3 flex items-center justify-center hover:bg-gray-50 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-light-blue-500">
-                                    <label for="user_photo" class="relative text-sm leading-4 font-medium text-gray-700 pointer-events-none">
-                                        <span>{{ __('Select A New Photo') }}</span>
-                                    </label>
-                                    <input id="user_photo" name="user_photo" type="file" class="absolute w-full h-full opacity-0 cursor-pointer border-gray-300 rounded-md">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hidden relative rounded-full overflow-hidden lg:block">
-                        <img class="relative rounded-full w-40 h-40" src="{{ auth()->user()->avatar }}" alt="">
-                        <label for="user-photo" class="absolute inset-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center text-sm font-medium text-white opacity-0 hover:opacity-100 focus-within:opacity-100">
-                            <span>{{ __('Select A New Photo') }}</span>
-                            <input type="file" id="user-photo" name="user-photo" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer border-gray-300 rounded-md">
-                        </label>
-                    </div>
-                </div>
+                <x-file-upload class="mt-6 lg:mt-0 lg:ml-6 lg:flex-grow-0 lg:flex-shrink-0" :avatar="auth()->user()->avatar" />
             </div>
 
             <div class="my-6">

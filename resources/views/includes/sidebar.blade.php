@@ -4,7 +4,7 @@
         <div class="flex items-center flex-shrink-0 px-6">
             <h1 class="text-gray-800 text-lg font-medium">
                 <a href="{{ route('dashboard') }}" class="flex items-center">
-                    <img class="mr-3 w-10 h-10" src="{{ asset('images/logo/1@3x.png') }}" alt="Networks Synergy">
+                    <x-application-logo class="w-10 h-10 mr-3" />
                     {{ config('app.name', 'Laravel') }}
                 </a>
             </h1>

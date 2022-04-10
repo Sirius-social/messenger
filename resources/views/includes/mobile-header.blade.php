@@ -11,8 +11,9 @@
         <div class="flex-1 flex">
             <form class="w-full flex md:ml-0" action="#" method="GET">
                 <label for="search_field" class="sr-only">Search</label>
-                <div class="relative flex items-center justify-center w-full text-gray-400 focus-within:text-gray-600">
-                    <x-application-logo />
+                <div class="relative flex items-center justify-center w-full text-gray-800 font-medium">
+                    <x-application-logo class="w-10 h-10 mr-3" />
+                    {{ config('app.name', 'Laravel') }}
                 </div>
             </form>
         </div>
@@ -22,7 +23,7 @@
                 <div>
                     <button @click="user_dropdown = (user_dropdown) ? false : true" type="button" class="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                         <span class="sr-only">Open user menu</span>
-                        <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixqx=7qwKjEp7Xv&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                        <img class="h-8 w-8 rounded-full" src="{{ auth()->user()->avatar }}" alt="">
                     </button>
                 </div>
 

@@ -1,6 +1,11 @@
 @extends('layouts.web')
 
 @section('content')
+{{--    @foreach($sections as $section)--}}
+{{--        @if($section->type == \App\Models\Section::HERO)--}}
+{{--            @include('web.includes.hero-section', ['item' => $section])--}}
+{{--        @endif--}}
+{{--    @endforeach--}}
     <div class="bg-white pt-24">
         <div class="container mx-auto">
             <div class="hero">

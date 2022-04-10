@@ -28,12 +28,8 @@
         To: "-translate-x-full"
     -->
     <div x-show="sidebarOpen"
-         x-transition:enter="transition ease-in-out duration-300 transform"
-         x-transition:enter-start="-translate-x-full"
-         x-transition:enter-end="translate-x-0"
-         x-transition:leave="transition ease-in-out duration-300 transform"
-         x-transition:leave-start="translate-x-0"
-         x-transition:leave-end="-translate-x-full"
+         x-bind:class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
+         x-transition
          class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white -translate-x-full">
         <!--
           Close button, show/hide based on off-canvas menu state.
@@ -45,12 +41,7 @@
             To: "opacity-0"
         -->
         <div x-show="sidebarOpen"
-             x-transition:enter="ease-in-out duration-300"
-             x-transition:enter-start="opacity-0"
-             x-transition:enter-end="opacity-100"
-             x-transition:leave="ease-in-out duration-300"
-             x-transition:leave-start="opacity-100"
-             x-transition:leave-end="opacity-0"
+             :class="sidebarOpen ? 'opacity-100' : 'opacity-0'"
              class="absolute top-0 right-0 -mr-12 pt-2">
             <button @click="sidebarOpen = false" class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                 <span class="sr-only">Close sidebar</span>
@@ -61,8 +52,9 @@
             </button>
         </div>
 
-        <div class="flex-shrink-0 flex items-center px-4">
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-purple-500-mark-gray-700-text.svg" alt="Workflow">
+        <div class="flex-shrink-0 flex items-center px-4 text-gray-800 font-medium">
+            <x-application-logo class="w-8 h-8 mr-3" />
+            {{ config('app.name', 'Laravel') }}
         </div>
         <div class="mt-5 flex-1 h-0 overflow-y-auto">
             <nav class="px-2">

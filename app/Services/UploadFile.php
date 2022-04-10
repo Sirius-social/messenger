@@ -13,15 +13,19 @@ class UploadFile
      * File uploading function
      *
      * @param \Illuminate\Http\UploadedFile $file
-     * @return string
+     * @return string|false
      * @throws \Exception
      */
-    public function upload(UploadedFile $file)
+    public function upload(UploadedFile $file): bool|string
     {
-        $filePath = $this->path().$this->hash().$this->extension($file);
-        $driver = Storage::disk('public');
-        $driver->put($filePath, $file);
-        return $driver->url($filePath);
+        if (!$file) {
+            return false;
+        }
+
+        $file_name = $this->hash() . $this->extension($file);
+
+        $file_path = $file->storeAs($this->path(), $file_name, ['disk' => 'public']);
+        return Storage::disk('public')->url($file_path);
     }
 
     /**
@@ -54,5 +58,24 @@ class UploadFile
     public function path(): string
     {
         return date('Y/m/d', time()).'/';
+    }
+
+    /**
+     * Clean given json string.
+     *
+     * @param string $file_str
+     * @return array|string|null
+     */
+    public static function clean(string $file_str): array|string|null
+    {
+        $file_str = str_replace("\/","/", $file_str);
+        $file_str = str_replace('"',"", $file_str);
+        if (!$file_str || trim($file_str) == '')
+            return null;
+        if (str_contains($file_str, config('app.url').'/storage/')) {
+            $file_str = str_replace(config('app.url').'/storage/', '', $file_str);
+        }
+
+        return $file_str;
     }
 }
