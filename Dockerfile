@@ -59,10 +59,10 @@ COPY ./docker/8.1/php.ini /etc/php/8.1/cli/conf.d/99-sail.ini
 RUN chmod +x /usr/local/bin/start-container
 RUN composer install --optimize-autoloader --no-dev -d /var/www/html/
 RUN chown -R sail:sail /var/www/
-RUN php artisan migrate &&
-    php artisan config:cache &&
-    php artisan route:cache &&
-    php artisan view:cache
+RUN php artisan migrate
+RUN php artisan config:cache
+RUN php artisan route:cache
+RUN php artisan view:cache
 RUN chmod -R 755 /var/www/html/storage/
 RUN chmod -R 755 /var/www/html/bootstrap/
 
