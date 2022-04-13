@@ -15,7 +15,7 @@ if [ $# -gt 0 ]; then
 else
     /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
 fi
-php artisan migrate
+php artisan migrate --force
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
