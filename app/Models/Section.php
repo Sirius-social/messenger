@@ -6,13 +6,14 @@ use App\Helpers\MediaHelper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use JetBrains\PhpStorm\ArrayShape;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Translatable\HasTranslations;
 
-class Section extends Model implements HasMedia
+class Section extends Model
 {
-    use HasFactory, HasTranslations, InteractsWithMedia, MediaHelper;
+    use HasFactory, HasTranslations, MediaHelper;
 
     public array $translatable = ['title', 'lead', 'subtitle', 'description', 'file_path', 'youtube_link'];
 
@@ -28,13 +29,7 @@ class Section extends Model implements HasMedia
         return $this->belongsTo(Page::class);
     }
 
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection('images');
-        $this->addMediaCollection('youtube-videos');
-    }
-
-    public function getTypes(): array
+    #[ArrayShape(['Hero' => "string", 'Addition information' => "string", 'Content' => "string"])] public function getTypes(): array
     {
         return [
             'Hero' => self::HERO,
