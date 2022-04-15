@@ -30,6 +30,7 @@ class SectionStoreRequest extends FormRequest
             'language' => 'required|string|max:255',
             'page_id' => 'required|numeric|exists:pages,id',
             'type' => $this->typeRules(),
+            'bg_class' => 'nullable|string|max:255',
             $this->getAttributeWithLang('title') => 'required|string|max:255',
             $this->getAttributeWithLang('lead') => 'nullable|string|max:255',
             $this->getAttributeWithLang('subtitle') => 'nullable|string|max:255',

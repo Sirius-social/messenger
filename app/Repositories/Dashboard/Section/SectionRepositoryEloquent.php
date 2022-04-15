@@ -59,6 +59,9 @@ class SectionRepositoryEloquent extends BaseRepositoryEloquent implements Sectio
         $model->setTypeAttribute($input['type']);
         $model->setPageIdAttribute((int)$input['page_id']);
         $model->setTranslation('title', $lang, $input['title_'.$lang]);
+        if ($this->inputHasKeyAndNotNull($input, 'bg_class')) {
+            $model->setBgClassAttribute($input['bg_class']);
+        }
         if ($this->inputHasKeyAndNotNull($input, 'lead_'.$lang)) {
             $model->setTranslation('lead', $lang, $input['lead_'.$lang]);
         }
@@ -69,7 +72,8 @@ class SectionRepositoryEloquent extends BaseRepositoryEloquent implements Sectio
             $model->setTranslation('description', $lang, $input['description_'.$lang]);
         }
         if ($this->inputHasKeyAndNotNull($input, 'youtube_link_'.$lang)) {
-            $model->setTranslation('youtube_link', $lang, $input['youtube_link_'.$lang]);
+            $link = $model->getYoutubeIdFromUrl($input['youtube_link_'.$lang]);
+            $model->setTranslation('youtube_link', $lang, $link);
         }
         if ($this->inputHasKeyAndNotNull($input, 'uploaded_photo_'.$lang)) {
             $value = $input['uploaded_photo_'.$lang];

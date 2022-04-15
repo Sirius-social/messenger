@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Helpers\MediaHelper;
+use App\Helpers\YoutubeHelper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,7 +14,7 @@ use Spatie\Translatable\HasTranslations;
 
 class Section extends Model
 {
-    use HasFactory, HasTranslations, MediaHelper;
+    use HasFactory, HasTranslations, MediaHelper, YoutubeHelper;
 
     public array $translatable = ['title', 'lead', 'subtitle', 'description', 'file_path', 'youtube_link'];
 
@@ -46,5 +47,10 @@ class Section extends Model
     public function setPageIdAttribute(int $value)
     {
         $this->attributes['page_id'] = $value;
+    }
+
+    public function setBgClassAttribute(string $value)
+    {
+        $this->attributes['bg_class'] = $value;
     }
 }

@@ -1,15 +1,15 @@
-<header class="header">
+<header class="py-4 absolute w-full">
     <div class="container mx-auto">
-        <div class="header-wrapper">
-            <div class="header-logo">
-                <a href="/" class="logo-link">
-                    <img class="logo-img" src="{{ asset('images/logo/1@3x.png') }}" alt="Networks Synergy">
+        <div class="flex justify-between items-center px-4 xl:px-0">
+            <div>
+                <a href="/" class="flex items-center font-bold sm:text-3xl text-xl">
+                    <img class="w-16 h-16 mr-2" src="{{ asset('images/logo/1@3x.png') }}" alt="Networks Synergy">
                     Sirius Messenger
                 </a>
             </div>
-            <nav class="header-navigation nav">
+            <nav>
                 <button type="button"
-                        class="mobile-nav-button">
+                        class="sm:hidden text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600">
                     <span class="sr-only">Navigation</span>
                     <svg width="24" height="24" fill="none" aria-hidden="true">
                         <path
@@ -18,24 +18,24 @@
                             stroke-linejoin="round"></path>
                     </svg>
                 </button>
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="{{ route('web.features') }}" class="nav-link {{ Route::currentRouteName() == 'web.features' ? 'active' : '' }}">
+                <ul class="hidden sm:flex">
+                    <li class="py-1.5 px-3">
+                        <a href="{{ route('web.features') }}" class="font-semibold text-gray-800 transition-all duration-100 hover:text-green-500 {{ Route::currentRouteName() == 'web.features' ? 'text-green-500' : '' }}">
                             Features
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('web.downloads') }}" class="nav-link">
+                    <li class="py-1.5 px-3">
+                        <a href="{{ route('web.downloads') }}" class="font-semibold text-gray-800 transition-all duration-100 hover:text-green-500">
                             Download
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="py-1.5 px-3">
+                        <a href="#" class="font-semibold text-gray-800 transition-all duration-100 hover:text-green-500">
                             Security
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="py-1.5 px-3">
+                        <a href="#" class="font-semibold text-gray-800 transition-all duration-100 hover:text-green-500">
                             Help center
                         </a>
                     </li>

@@ -49,6 +49,14 @@
                     </fieldset>
                 </div>
 
+                <div>
+                    <x-label for="title" :value="__('Background class')"/>
+
+                    <x-input id="bg_class" class="mt-3 w-full"
+                             type="text"
+                             name="bg_class"
+                             placeholder="bg-gray-100" />
+                </div>
 
                 <div>
                     <x-label for="title" :value="__('Title')"/>

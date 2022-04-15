@@ -12,7 +12,9 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
         @livewireStyles
+
         <!-- Scripts -->
     </head>
     <body x-data="{sidebarOpen: false, user_dropdown: false}" class="font-sans antialiased h-screen flex overflow-hidden bg-white">
