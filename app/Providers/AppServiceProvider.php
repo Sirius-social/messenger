@@ -17,6 +17,9 @@ class AppServiceProvider extends ServiceProvider
         if (config('app.env') !== 'local') {
             \URL::forceScheme('https');
         }
+        if ($this->app->isLocal()) {
+            $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+        }
     }
 
     /**

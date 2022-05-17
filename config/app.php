@@ -163,7 +163,7 @@ return [
         /*
          * Package Services Providers...
          */
-        Barryvdh\Debugbar\ServiceProvider::class,
+
         /*
          * Application Services Providers...
          */
