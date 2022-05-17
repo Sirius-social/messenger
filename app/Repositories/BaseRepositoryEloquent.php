@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Repositories;
-
 
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
@@ -24,17 +22,31 @@ class BaseRepositoryEloquent implements BaseRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function all(): Collection
+    public function all(string|array $with = null): Collection
     {
-        return $this->model->query()->latest()->get();
+        $query = $this->getQuery();
+
+        if (!is_null($with)) {
+            $query->with($with);
+        }
+
+        return $query->latest()->get();
     }
 
     /**
      * @inheritDoc
      */
-    public function paginated($perPage = 24): LengthAwarePaginator
-    {
-        return $this->model->query()->latest()->paginate($perPage);
+    public function paginated(
+        $perPage = 24,
+        string|array $with = null
+    ): LengthAwarePaginator {
+        $query = $this->getQuery();
+
+        if (!is_null($with)) {
+            $query->with($with);
+        }
+
+        return $query->latest()->paginate($perPage);
     }
 
     /**
@@ -48,9 +60,15 @@ class BaseRepositoryEloquent implements BaseRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function find(int $id): Model
+    public function find(int $id, string|array $with = null): Model
     {
-        return $this->model->query()->findOrFail($id);
+        $query = $this->getQuery();
+
+        if (!is_null($with)) {
+            $query->with($with);
+        }
+
+        return $query->findOrFail($id);
     }
 
     /**

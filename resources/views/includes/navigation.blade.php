@@ -9,22 +9,10 @@
     {{ __('Dashboard') }}
 </a>
 
-<a href="{{ route('pages.index') }}"
-   class="{{ Route::currentRouteName() == 'pages.index' ? 'bg-gray-200 text-gray-900' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50' }} group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-   aria-current="page">
-    <!-- Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="{{ Route::currentRouteName() == 'pages.index' ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500'}} mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+<a href="{{ route('dashboard.feedback.list') }}"
+   class="{{ Route::currentRouteName() == 'dashboard.feedback.list' ? 'bg-gray-200 text-gray-900' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50' }} group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+    <svg xmlns="http://www.w3.org/2000/svg" class="{{ Route::currentRouteName() == 'dashboard.feedback.list' ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500'}} mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 3l-6 6m0 0V4m0 5h5M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
     </svg>
-    {{ __('Pages') }}
-</a>
-
-<a href="{{ route('sections.index') }}"
-   class="{{ Route::currentRouteName() == 'sections.index' ? 'bg-gray-200 text-gray-900' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50' }} group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-   aria-current="page">
-    <!-- Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="{{ Route::currentRouteName() == 'sections.index' ? 'text-gray-500' : 'text-gray-400 group-hover:text-gray-500'}} mr-3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-    </svg>
-    {{ __('Sections') }}
+    {{ __('Feedbacks') }}
 </a>

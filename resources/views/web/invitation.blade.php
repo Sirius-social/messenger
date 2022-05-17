@@ -1,6 +1,4 @@
-@extends('layouts.web')
-
-@section('content')
+<x-web-layout>
     <div class="pt-24">
         <div class="bg-slate-200 py-4 min-h-screen">
             <div class="relative mx-auto py-8 max-w-lg bg-white shadow rounded-2xl">
@@ -20,4 +18,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-web-layout>

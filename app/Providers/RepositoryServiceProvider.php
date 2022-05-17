@@ -2,12 +2,10 @@
 
 namespace App\Providers;
 
-use App\Repositories\Dashboard\Page\PageRepositoryEloquent;
-use App\Repositories\Dashboard\Page\PageRepositoryInterface;
-use App\Repositories\Dashboard\Section\SectionRepositoryEloquent;
-use App\Repositories\Dashboard\Section\SectionRepositoryInterface;
-use App\Repositories\WEB\Section\SectionRepositoryEloquent as WEBSectionRepositoryEloquent;
-use App\Repositories\WEB\Section\SectionRepositoryInterface as WEBSectionRepositoryInterface;
+use App\Repositories\Dashboard\Feedback\FeedbackRepositoryEloquent as DashboardFeedbackRepositoryEloquent;
+use App\Repositories\Dashboard\Feedback\FeedbackRepositoryInterface as DashboardFeedbackRepositoryInterface;
+use App\Repositories\WEB\Feedback\FeedbackRepositoryEloquent as WEBFeedbackRepositoryEloquent;
+use App\Repositories\WEB\Feedback\FeedbackRepositoryInterface as WEBFeedbackRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -19,10 +17,15 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(PageRepositoryInterface::class, PageRepositoryEloquent::class);
-        $this->app->bind(SectionRepositoryInterface::class, SectionRepositoryEloquent::class);
+        $this->app->bind(
+            DashboardFeedbackRepositoryInterface::class,
+            DashboardFeedbackRepositoryEloquent::class
+        );
 
-        $this->app->bind(WEBSectionRepositoryInterface::class, WEBSectionRepositoryEloquent::class);
+        $this->app->bind(
+            WEBFeedbackRepositoryInterface::class,
+            WEBFeedbackRepositoryEloquent::class
+        );
     }
 
     /**

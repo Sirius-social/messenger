@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Repositories;
-
 
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
@@ -16,18 +14,22 @@ interface BaseRepositoryInterface
     /**
      * Get all resources of the model
      *
+     * @param string|array|null $with
      * @return \Illuminate\Database\Eloquent\Collection;
      */
-    public function all(): Collection;
+    public function all(string|array $with = null): Collection;
 
     /**
      * Get paginated resources of the model
      *
      * @param int $perPage
-     *
+     * @param string|array|null $with
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public function paginated($perPage = 24): LengthAwarePaginator;
+    public function paginated(
+        $perPage = 24,
+        string|array $with = null
+    ): LengthAwarePaginator;
 
     /**
      * Create specified resource from the model
@@ -42,10 +44,10 @@ interface BaseRepositoryInterface
      * Find specified resource from the model
      *
      * @param int $id
-     *
+     * @param string|array|null $with
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function find(int $id): Model;
+    public function find(int $id, string|array $with = null): Model;
 
     /**
      * Update specified resource from the model

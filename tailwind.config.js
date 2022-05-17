@@ -1,10 +1,20 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+    theme: {
+        fontFamily: {
+            sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+        },
+        borderRadius: {
+            '4xl': '30px',
+            ...defaultTheme.borderRadius,
+        },
+    },
+
     content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./resources/**/*.vue",
+        './resources/**/*.blade.php',
+        './resources/**/*.js',
+        './resources/**/*.vue',
     ],
 
     variants: {
@@ -15,6 +25,6 @@ module.exports = {
 
     plugins: [
         require('@tailwindcss/forms'),
-        require('@tailwindcss/typography')
+        require('@tailwindcss/typography'),
     ],
 };

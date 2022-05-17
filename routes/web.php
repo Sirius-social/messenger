@@ -1,7 +1,7 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Web\IndexController::class, 'index'])->name('web.home');
-Route::get('features', [\App\Http\Controllers\Web\FeaturesController::class, 'index'])->name('web.features');
-Route::get('downloads', [\App\Http\Controllers\Web\DownloadsController::class, 'index'])->name('web.downloads');
-Route::get('invitation', [\App\Http\Controllers\Web\InvitationController::class, 'index'])->name('web.invitation');
+Route::get('/', [Web\LocalizationController::class, 'store']);
+Route::get('change-locale/{locale}', [
+    Web\LocalizationController::class,
+    'update'
+])->name('web.change.locale');
 
-require __DIR__.'/dashboard.php';
+Route::prefix('{locale}')->group(function () {
+    Route::get('/', [Web\IndexController::class, 'index'])->name('web.home');
+
+    Route::get('invitation', [Web\InvitationController::class, 'index'])->name(
+        'web.invitation'
+    );
+
+    Route::post('feedback', [Web\FeedbackController::class, 'store'])->name(
+        'web.feedback.store'
+    );
+});
+
+require __DIR__ . '/dashboard.php';

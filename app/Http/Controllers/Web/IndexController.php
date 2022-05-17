@@ -12,13 +12,6 @@ use Route;
 
 class IndexController extends Controller
 {
-    protected SectionRepositoryEloquent $section_repository;
-
-    public function __construct()
-    {
-        $this->section_repository = app(SectionRepositoryInterface::class);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +19,6 @@ class IndexController extends Controller
      */
     public function index(): Application|Factory|View
     {
-        $sections = $this->section_repository->getByPageRouteName(Route::currentRouteName());
-        return view('web.index', compact('sections'));
+        return view('web.index');
     }
 }
