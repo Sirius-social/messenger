@@ -9,10 +9,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.10",
-        "spatie/laravel-medialibrary": "^10.0.0",
-        "spatie/laravel-translatable": "^6.0",
-        "ext-sodium": "*"
+        "livewire/livewire": "^2.10"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

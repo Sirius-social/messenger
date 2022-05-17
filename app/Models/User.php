@@ -37,6 +37,7 @@ use Illuminate\Notifications\Notifiable;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read string|null $avatar
  */
 class User extends Authenticatable
 {
@@ -91,7 +92,7 @@ class User extends Authenticatable
      *
      * @return string|null
      */
-    public function getAvatarAttribute()
+    public function getAvatarAttribute(): ?string
     {
         $hash = md5(strtolower(trim($this->email)));
 
