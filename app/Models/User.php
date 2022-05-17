@@ -48,22 +48,14 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'photo_path'
-    ];
+    protected $fillable = ['name', 'email', 'password', 'photo_path'];
 
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['password', 'remember_token'];
 
     /**
      * The attributes that should be cast to native types.
@@ -71,7 +63,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'email_verified_at' => 'datetime'
     ];
 
     /**
@@ -96,6 +88,7 @@ class User extends Authenticatable
     {
         $hash = md5(strtolower(trim($this->email)));
 
-        return $this->photo_path ?: "https://www.gravatar.com/avatar/$hash?d=mp";
+        return $this->photo_path ?:
+            "https://www.gravatar.com/avatar/$hash?d=mp";
     }
 }

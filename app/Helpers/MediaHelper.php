@@ -18,7 +18,10 @@ trait MediaHelper
      */
     public function updateMediaColumn(Request $request, string $column)
     {
-        if ($request->hasFile('uploaded_photo') && $request->file('uploaded_photo')) {
+        if (
+            $request->hasFile('uploaded_photo') &&
+            $request->file('uploaded_photo')
+        ) {
             $this->changeModel($request, $column);
         }
     }
@@ -34,7 +37,9 @@ trait MediaHelper
     protected function changeModel(Request $request, string $column)
     {
         $this->update([
-            $column => (new UploadFile)->upload($request->file('uploaded_photo'))
+            $column => (new UploadFile())->upload(
+                $request->file('uploaded_photo')
+            )
         ]);
     }
 }
