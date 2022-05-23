@@ -1,11 +1,11 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Web;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class Footer extends Component
+class Header extends Component
 {
     /**
      * Get the view / contents that represent the component.
@@ -14,6 +14,6 @@ class Footer extends Component
      */
     public function render(): View
     {
-        return view('web.components.footer');
+        return view('web.components.header');
     }
 }

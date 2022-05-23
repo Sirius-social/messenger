@@ -163,6 +163,7 @@ return [
         /*
          * Package Services Providers...
          */
+        Flasher\Laravel\FlasherServiceProvider::class,
 
         /*
          * Application Services Providers...

@@ -28,7 +28,8 @@ class FeedbackStoreRequest extends FormRequest
             'phone' => 'required|string|max:255',
             'email' => 'required|email',
             'company_name' => 'required|string|max:255',
-            'body' => 'required|string'
+            'body' => 'required|string',
+            'policy' => 'required|accepted'
         ];
     }
 }

@@ -1,3 +1,3 @@
-<div>
-    <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->
+<div class='bg-slate-800 py-9 text-center'>
+    <p class='text-lg text-white uppercase font-bold'>© 2022 Sirius - All rights reserved</p>
 </div>

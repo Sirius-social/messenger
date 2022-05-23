@@ -15,4 +15,10 @@ class FeedbackRepositoryEloquent extends BaseRepositoryEloquent implements
     {
         $this->model = new Feedback();
     }
+
+    public function create(array $input): Feedback
+    {
+        unset($input['policy']);
+        return $this->getQuery()->create($input);
+    }
 }

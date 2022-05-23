@@ -1,11 +1,11 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Web;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
-class Navigation extends Component
+class Checkbox extends Component
 {
     /**
      * Get the view / contents that represent the component.
@@ -14,6 +14,6 @@ class Navigation extends Component
      */
     public function render(): View
     {
-        return view('web.components.navigation');
+        return view('web.components.checkbox');
     }
 }

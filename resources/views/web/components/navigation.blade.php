@@ -1,20 +1,20 @@
-<li class='hover:border-blue-600 border-b-2 border-transparent pb-1 {{ Route::currentRouteName() === 'web.home' ? 'font-bold border-blue-600' : '' }}'>
-    <a href='{{ route('web.home',  ['locale' => App::getLocale()]) }}' class='text-slate-900 text-base tracking-wide'>
+<li>
+    <a href='#hero' class='text-slate-900 text-base tracking-wide hover:border-blue-600 border-b-2 border-transparent pb-1 font-bold border-blue-600'>
         {{ \App\Services\Localization::translate('web.home') }}
     </a>
 </li>
-<li class='hover:border-blue-600 border-b-2 border-transparent pb-1'>
-    <a href='#' class='text-slate-900 text-base tracking-wide'>
+<li>
+    <a href='#enc_problem' class='text-slate-900 text-base tracking-wide hover:border-blue-600 border-b-2 border-transparent pb-1'>
         {!! \App\Services\Localization::translate('web.enc_problem') !!}
     </a>
 </li>
-<li class='hover:border-blue-600 border-b-2 border-transparent pb-1'>
-    <a href='#' class='text-slate-900 text-base tracking-wide'>
+<li>
+    <a href='#how_it_works' class='text-slate-900 text-base tracking-wide hover:border-blue-600 border-b-2 border-transparent pb-1'>
         {{ \App\Services\Localization::translate('web.how_it_works') }}
     </a>
 </li>
-<li class='hover:border-blue-600 border-b-2 border-transparent pb-1'>
-    <a href='#' class='text-slate-900 text-base tracking-wide'>
+<li>
+    <a href='#contact' class='text-slate-900 text-base tracking-wide hover:border-blue-600 border-b-2 border-transparent pb-1'>
         {{ \App\Services\Localization::translate('web.contact') }}
     </a>
 </li>

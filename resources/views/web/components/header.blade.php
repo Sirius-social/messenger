@@ -5,7 +5,7 @@
                 <img class='w-48 h-12' src='{{ asset('images/logo.svg') }}' alt='Sirius messenger'>
             </a>
             <ul class='flex space-x-12'>
-                <x-navigation />
+                <x-web.navigation />
             </ul>
         </div>
     </header>

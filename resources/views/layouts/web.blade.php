@@ -16,12 +16,13 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @flasher_render
 </head>
 <body class="font-sans antialiased bg-white text-base">
-    <x-header />
+    <x-web.header />
     <main>
         {{ $slot }}
     </main>
-    <x-footer />
+    <x-web.footer />
 </body>
 </html>
