@@ -13,10 +13,5 @@ chmod -R ugo+rw /.composer
 if [ $# -gt 0 ]; then
     exec gosu $WWWUSER "$@"
 else
-    /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+    exec /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
 fi
-php artisan migrate --force
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-touch /var/www/html/HELLO

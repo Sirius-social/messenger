@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Services;
-
 
 class Invitation
 {
@@ -13,12 +11,17 @@ class Invitation
         $this->url = $url;
     }
 
-    /**
-     * @throws \SodiumException
-     */
     public function parse()
     {
-        $bytes = sodium_base642bin($this->url, SODIUM_BASE64_VARIANT_URLSAFE);
+        try {
+            $bytes = sodium_base642bin(
+                $this->url,
+                SODIUM_BASE64_VARIANT_URLSAFE
+            );
+        } catch (\SodiumException $e) {
+            return false;
+        }
+
         return json_decode($bytes, true);
     }
 }

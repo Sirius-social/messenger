@@ -44,5 +44,6 @@ return [
         'I have read and accept the Privacy Policy.',
     'Submit feedback' => 'Submit feedback',
     'Your request has been sent and will be reviewed in the near future.' =>
-        'Your request has been sent and will be reviewed in the near future.'
+        'Your request has been sent and will be reviewed in the near future.',
+    'Switch language' => 'Switch language'
 ];

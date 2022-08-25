@@ -1,5 +1,4 @@
-<div class='bg-contain bg-no-repeat bg-right-bottom scroll-mt-24' id='contact'
-     style='background-image: url({{ asset('images/footer-bg.png') }});'>
+<div class='sm:bg-[url({{ asset('images/footer-bg.png') }})] bg-none sm:bg-contain bg-no-repeat bg-right-bottom scroll-mt-24' id='contact'>
     <div class='-mt-7 pt-12 pb-24'>
         <x-web.title>
             <x-slot name="title">
@@ -9,13 +8,13 @@
                 {!! \App\Services\Localization::translate('web.feedback.subtitle') !!}
             </x-slot>
         </x-web.title>
-        <div class='mt-16'>
+        <div class='mt-16 px-8 xl:px-0'>
             <div class='container mx-auto'>
                 <form action='{{ route('web.feedback.store', ['locale' => \App\Services\Localization::get()]) }}'
                       method='post'>
                     @csrf
-                    <div class='flex space-x-14 mb-4'>
-                        <div class='w-1/2'>
+                    <div class='sm:flex sm:space-x-14 mb-4'>
+                        <div class='sm:w-1/2 w-full'>
                             <x-web.input :label="\App\Services\Localization::translate('web.Name')" class="w-full"
                                          placeholder="{!! \App\Services\Localization::translate('web.Type full name here') !!}"
                                          id='full_name' type="text" name="full_name" required>
@@ -29,7 +28,7 @@
                                 </x-slot>
                             </x-web.input>
                         </div>
-                        <div class='w-1/2'>
+                        <div class='sm:w-1/2 w-full'>
                             <x-web.input :label="\App\Services\Localization::translate('web.Phone number')"
                                          class="w-full"
                                          placeholder="(123) 456-7890"
@@ -45,8 +44,8 @@
                             </x-web.input>
                         </div>
                     </div>
-                    <div class='flex space-x-14 mb-4'>
-                        <div class='w-1/2'>
+                    <div class='sm:flex sm:space-x-14 mb-4'>
+                        <div class='sm:w-1/2 w-full'>
                             <x-web.input :label="\App\Services\Localization::translate('web.Email')" class="w-full"
                                          placeholder="{!! \App\Services\Localization::translate('web.Email address') !!}"
                                          type="email" id='email' name="email" required>
@@ -60,7 +59,7 @@
                                 </x-slot>
                             </x-web.input>
                         </div>
-                        <div class='w-1/2'>
+                        <div class='sm:w-1/2 w-full'>
                             <x-web.input :label="\App\Services\Localization::translate('web.Company')" class="w-full"
                                          placeholder="{!! \App\Services\Localization::translate('web.Company name') !!}"
                                          id='company_name' type="text" name="company_name" required>
@@ -80,14 +79,14 @@
                             :label="\App\Services\Localization::translate('web.Additional feedback')"
                             name="body" id='body' rows="4" cols="50" required></x-web.textarea>
                     </div>
-                    <div class='flex space-x-2 mt-8'>
-                        <div class='w-1/2'>
+                    <div class='sm:flex sm:space-x-2 mt-8'>
+                        <div class='sm:w-1/2 w-full sm:mb-0 mb-4'>
                             <x-web.checkbox
                                 :label="\App\Services\Localization::translate('web.I have read and accept the Privacy Policy.')"
                                 id="policy" name="policy" required />
                         </div>
-                        <div class='w-1/2 flex justify-end'>
-                            <x-web.button class="px-8 py-4 bg-white w-80">
+                        <div class='sm:w-1/2 w-full flex justify-end'>
+                            <x-web.button class="px-8 py-4 bg-white sm:w-80 w-full">
                                 {!! \App\Services\Localization::translate('web.Submit feedback') !!}
                             </x-web.button>
                         </div>
