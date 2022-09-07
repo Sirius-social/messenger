@@ -9,6 +9,16 @@
     <title>Sirius Messenger</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBS38Q6EP7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MBS38Q6EP7');
+    </script>
+
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap">
 
