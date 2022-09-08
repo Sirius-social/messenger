@@ -10,13 +10,13 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBS38Q6EP7"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG4LQC8K5W"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-MBS38Q6EP7');
+        gtag('config', 'G-VG4LQC8K5W');
     </script>
 
     <!-- Fonts -->
