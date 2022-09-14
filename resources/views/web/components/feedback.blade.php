@@ -8,7 +8,7 @@
                 {!! \App\Services\Localization::translate('web.feedback.subtitle') !!}
             </x-slot>
         </x-web.title>
-        <div class='mt-16 px-8 xl:px-0'>
+        <div class='mt-16 px-6 sm:px-4'>
             <div class='container mx-auto'>
                 <form action='{{ route('web.feedback.store', ['locale' => \App\Services\Localization::get()]) }}'
                       method='post'>

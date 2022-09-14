@@ -1,4 +1,4 @@
-<div class='bg-gray-200 z-20 sm:bg-[url({{ asset('images/header-bg.png') }})] sm:bg-contain bg-none sm:bg-no-repeat bg-right pb-24 px-4 sm:px-6 md:px-8'
+<div class='bg-gray-200 z-20 sm:bg-[url({{ asset('images/header-bg.png') }})] sm:bg-contain bg-none sm:bg-no-repeat bg-right pb-24 sm:px-4 px-6'
      id='hero'>
     <div class='container mx-auto flex lg:flex-row flex-col pt-40 items-center'>
         <div class='lg:w-1/2 w-full flex flex-col'>

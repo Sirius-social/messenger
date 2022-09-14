@@ -1,10 +1,10 @@
 <div class="fixed z-50 inset-0 hidden" id="mobile-menu" role="dialog" aria-modal="true">
-    <div class="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-slate-900/80" id="mobile-menu-overlay"
+    <div class="fixed inset-0 bg-black/20 backdrop-blur-sm" id="mobile-menu-overlay"
          aria-hidden="true"></div>
     <div
-        class="fixed top-4 right-4 w-full max-w-xs bg-white rounded-lg shadow-lg p-6 text-base font-semibold text-slate-900 dark:bg-slate-800 mobile-nav-button">
+        class="fixed top-4 right-4 w-full max-w-xs bg-white rounded-lg shadow-lg p-6 text-base font-semibold text-slate-900 mobile-nav-button">
         <button type="button"
-                class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+                class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600"
                 tabindex="0"><span class="sr-only">Close navigation</span>
             <svg viewBox="0 0 10 10" class="w-2.5 h-2.5 overflow-visible" aria-hidden="true">
                 <path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2"
@@ -14,10 +14,10 @@
         <ul class="space-y-6">
             <x-web.navigation />
         </ul>
-        <div class="mt-6 pt-6 border-t border-slate-200 dark:border-slate-200/10">
+        <div class="mt-6 pt-6 border-t border-slate-200">
             <div class="flex items-center justify-between">
                 <label for="theme"
-                       class="text-slate-700 font-normal dark:text-slate-400">
+                       class="text-slate-700 font-normal">
                     {{ \App\Services\Localization::translate('web.Switch language') }}
                 </label>
                 <div class='flex'>

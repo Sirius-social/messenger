@@ -1,5 +1,5 @@
 <div class='xl:mt-12 flex flex-col items-center pt-12 pb-24 -mt-7 scroll-mt-44' id='enc_problem'>
-    <div class='container mx-auto xl:px-0 px-8'>
+    <div class='container mx-auto sm:px-0 px-6'>
         <x-web.title>
             <x-slot name="title">
                 {!! \App\Services\Localization::translate('web.enc_problem') !!}

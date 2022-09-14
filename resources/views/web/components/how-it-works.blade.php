@@ -1,5 +1,5 @@
 <div class='bg-gray-200 -mt-7 pt-12 pb-24 scroll-mt-24' id='how_it_works'>
-    <div class='container mx-auto px-8'>
+    <div class='container mx-auto px-6 sm:px-4'>
         <x-web.title>
             <x-slot name="title">
                 {!! \App\Services\Localization::translate('web.how_it_works') !!}
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class='sm:w-8/12 w-full sm:h-auto h-64'>
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SLcxd_dEG-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SLcxd_dEG-c" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         <div class='lg:py-4 lg:px-8 py-2 px-4 relative' style='background-image:url({{ asset('images/enc-problem-bg.png') }});'>
