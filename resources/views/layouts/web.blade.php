@@ -9,6 +9,19 @@
     <title>Sirius Messenger</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
 
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/jquery.cookie-1.4.1.min.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    @flasher_render
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -21,21 +34,12 @@
             clickmap:true,
             trackLinks:true,
             accurateTrackBounce:true,
-            webvisor:true
+            webvisor:true,
+            params: yaParams
         });
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/90270514" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    @flasher_render
 </head>
 <body class="font-sans antialiased bg-white text-base">
     <x-web.header />

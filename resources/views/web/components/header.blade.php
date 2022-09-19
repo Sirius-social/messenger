@@ -1,5 +1,5 @@
 <div class='relative'>
-    <header class="bg-white py-6 shadow-xl fixed inset-x-0 z-50 xl:px-0 px-6 sm:px-4">
+    <header class="header bg-white py-6 shadow-xl fixed inset-x-0 z-50 xl:px-0 px-6 sm:px-4">
         <div class="container mx-auto flex justify-between items-center">
             <a href="{{ route('web.home', ['locale' => App::getLocale()]) }}">
                 <img class='w-48 h-12' src='{{ asset('images/logo.svg') }}' alt='Sirius messenger'>

@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "@prettier/plugin-php": "^0.18.4",
+        "jquery": "^3.6.1",
         "prettier": "^2.6.2"
     }
 }
