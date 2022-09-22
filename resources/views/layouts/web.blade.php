@@ -60,14 +60,8 @@
             params:yaParams
         });
     </script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-
-    </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/90516163" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <noscript><div><img src="https://mc.yandex.ru/watch/90270514" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter -->
 </head>
 <body class="font-sans antialiased bg-white text-base">
     <x-web.header />
